@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LibrosListaServlet</servlet-name>
+        <servlet-class>ejemploh2.servlet.LibrosListaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LibrosEditarServlet</servlet-name>
+        <servlet-class>ejemploh2.servlet.LibrosEditarServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LibrosEliminarServlet</servlet-name>
+        <servlet-class>ejemploh2.servlet.LibrosEliminarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibrosListaServlet</servlet-name>
+        <url-pattern>/libros</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LibrosEditarServlet</servlet-name>
+        <url-pattern>/libros/editar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LibrosEliminarServlet</servlet-name>
+        <url-pattern>/libros/eliminar</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

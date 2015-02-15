@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-11-2015 06:20:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="biblioteca" name="ejemploh2.persistencia.Libro" optimistic-lock="version" table="libros">
+    <id name="idLibro" type="java.lang.Integer" unsaved-value="0">
+      <column name="idLibros"/>
+      <generator class="identity"/>
+    </id>
+    <property name="titulo" type="string">
+      <column length="100" name="titulo" not-null="true"/>
+    </property>
+    <property name="subtitulo" type="string">
+      <column length="100" name="subtitulo" not-null="true"/>
+    </property>
+    <property name="edicion" type="int">
+      <column name="edicion" not-null="true"/>
+    </property>
+    <property name="paginas" type="int">
+      <column name="paginas" not-null="true"/>
+    </property>
+    <property name="isbn" type="long">
+      <column name="isbn" not-null="true"/>
+    </property>
+    <property name="ejemplares" type="int">
+      <column name="ejemplares" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
